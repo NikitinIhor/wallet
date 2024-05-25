@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> wallet </title>
+    <!-- 300light,500mid,600semiB    &display=swap   -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <script src="https://kit.fontawesome.com/319e7c7e7a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    
+    <div class="wrapper">
+        <main class="page">
+            <div class="header">
+                <h1>my personal <span>Wallet</span></h1>
+                <div class="wallet-btn"><button class="wallet-close-btn">close</button></div>
+            </div>
+            <div class="wallet__preload">
+                <button class="wallet-closed"><img src="assets/images/wallet-closed.jpg" alt="wallet"
+                        width="300px"></button>
+                <button class="wallet-opened"><img src="assets/images/wallet-opened.jpg" alt="wallet"
+                        width="200px"></button>
+            </div>
+            <div class="wallet-box">
+                <div class="wallet-left">
+                    <p>Transaction list</p>
+                    <div class="left-body">
+                        <div class="income">
+                            <h3 class="income-title">income:</h3>
+                        </div>
+                        <div class="expense">
+                            <h3 class="expense-title">expense:</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="wallet-right">
+                    <div class="cash">MY CASH :</div>
+                    <span class="my-cash">0 $</span>
+                    <div class="buttons">
+                        <button class="add">add transact</button>
+                        <button class="delete">delete transact</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="popup">
+            <div class="popup__container">
+                <p>ADD NEW TRANSACTION</p>
+                <div class="popup-title">
+                    <label for="title">TITLE :</label>
+                    <input id="title" type="text">
+                    <p class="error-title">you must fill the title</p>
+                </div>
+                <div class="popup-sum">
+                    <label for="sum">AMOUNT :
+                        <small><br>if at the beginning [ + ] - income <br>
+                            if at the beginning [ - ] - expense</small>
+                    </label>
+                    <input id="sum" type="number">
+                    <p class="error-sum">you must write the sum</p>
+                </div>
+                <div class="popup-category">
+                    <label for="category">categoria :</label>
+                    <select id="category" type="text" onclick="selectedIcons()">
+                        <option value="none" selected disabled></option>
+                        <option value="income">[ + ] income</option>
+                        <option value="shop">[ - ] shopping</option>
+                        <option value="cinema">[ - ] cinema</option>
+                        <option value="food">[ - ] food</option>
+                    </select>
+                    <p class="error-category">you must choose one of the categories</p>
+                </div>
+                <div class="popup-buttons">
+                    <button class="popup-save">SAVE</button>
+                    <button class="popup-close">CLOSE</button>
+                </div>
+            </div>
+        </div>
+        <div class="exchange-btn">
+            <button class="exchange-button-open">exchange rate <span>open</span></button>
+            <button class="exchange-button-close">exchange rate <span>close</span></button>
+        </div>
+        <div class="exchange-rate">
+            <div class="exchange-body">
+                <div class="app-body">
+                    <div class="section-left">
+                        <input type="number" class="amount-one" value="1">
+                        <select id="currency-one">
+                            <option value="PLN" selected>PLN</option>
+                            <option value="USD">USD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
+                    <button class="swap">
+                        <i class="fas fa-retweet"></i>
+                    </button>
+                    <div class="section-right">
+                        <input type="number" class="amount-two" disabled>
+                        <select id="currency-two">
+                            <option value="PLN">PLN</option>
+                            <option value="USD" selected>USD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
+                </div>
+                <p class="rate-info"></p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/dynamic_adapt.js"></script>
+    <!-- <script src="assets/js/catalog.js"></script> -->
+    <!-- <script src="assets/js/tabs.js"></script> -->
+    <!-- <script src="assets/js/parallax-mouse.js"></script> -->
+    <!-- <script src="assets/js/header-scroll.js"></script> -->
+    <!-- <script src="assets/js/spollers.js"></script> -->
+    <!-- <script src="assets/js/slider.js"></script> -->
+    <!-- <script src="assets/js/rating.js"></script> -->
+
+</body>
+</html>
